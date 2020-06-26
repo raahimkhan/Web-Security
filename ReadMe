@@ -1,0 +1,10 @@
+To run this example you must have python installed (tested with version 2.6
+and version 2.7), and sqlite3.
+
+To run the squigler web server:
+
+	python webserver.py
+
+Visit http://127.0.0.1:8080/ for squigler.com.  (You may be able to visit
+http://localhost:8080/ , but on some systems that doesn't work, as the
+browser tries to find www.localhost.com.)

